@@ -1,0 +1,102 @@
+﻿@inject HttpClient Http
+@page "/movie"
+@using System.Diagnostics.Tracing
+
+
+<PageTitle>Movie title</PageTitle>
+
+@if (TheMovie != null)
+{
+    @*Written with Leighton, Harrison, Joe from year 9*@
+    <div style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/@TheMovie.backdrop_path');">
+        <h1 class="display-1 text-light">@TheMovie.title</h1>    
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+    </div>
+}
+
+
+
+
+
+
+@code {
+    private MovieDetails TheMovie { get; set; }
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        TheMovie = await Http.GetFromJsonAsync<MovieDetails>("https://api.themoviedb.org/3/movie/566525?api_key=245735d960369aaa9100f4410af813de");
+    }
+
+    public class MovieResult
+    {
+        public MovieDetails MovieDetails { get; set; }
+    }
+
+    public class Genre
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+    }
+
+    public class ProductionCompany
+    {
+        public int id { get; set; }
+        public string logo_path { get; set; }
+        public string name { get; set; }
+        public string origin_country { get; set; }
+    }
+
+    public class ProductionCountry
+    {
+        public string iso_3166_1 { get; set; }
+        public string name { get; set; }
+    }
+
+    public class SpokenLanguage
+    {
+        public string english_name { get; set; }
+        public string iso_639_1 { get; set; }
+        public string name { get; set; }
+    }
+
+    public class MovieDetails
+    {
+        public bool adult { get; set; }
+        public string backdrop_path { get; set; }
+        public object belongs_to_collection { get; set; }
+        public int budget { get; set; }
+        public List<Genre> genres { get; set; }
+        public string homepage { get; set; }
+        public int id { get; set; }
+        public string imdb_id { get; set; }
+        public string original_language { get; set; }
+        public string original_title { get; set; }
+        public string overview { get; set; }
+        public double popularity { get; set; }
+        public string poster_path { get; set; }
+        public List<ProductionCompany> production_companies { get; set; }
+        public List<ProductionCountry> production_countries { get; set; }
+        public string release_date { get; set; }
+        public int revenue { get; set; }
+        public int runtime { get; set; }
+        public List<SpokenLanguage> spoken_languages { get; set; }
+        public string status { get; set; }
+        public string tagline { get; set; }
+        public string title { get; set; }
+        public bool video { get; set; }
+        public double vote_average { get; set; }
+        public int vote_count { get; set; }
+    }
+
+
+}

@@ -1,9 +1,7 @@
 ﻿@inject HttpClient Http
 @page "/"
-@using CFSCareerDay.Client
-@using System.Net
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Movie list</PageTitle>
 
 <h1 class="display-1">Hello CFS Students <br/> Help Me Write this App!</h1>
 @*This code written with George Year 7*@
@@ -26,7 +24,7 @@
                         <h2 class="card-title">@movie.title</h2>
                         
                         @*This code written with Dillon Year 12*@
-                        <p class="card-text">Ruby says "@movie.overview"</p>
+                        <p class="card-text">Hattie says "@movie.overview"</p>
 
                         @*This code written with Tom and Elliot Year 8*@
                         <p> Release date: @(movie.NiceReleaseDate)</p> @*This code written with Kiah Year 11 *@
@@ -50,7 +48,7 @@
         Movies = result.results;
     }
 
-    class MovieResult
+    public class MovieResult
     {
         public List<Movie> results { get; set; }
     }
