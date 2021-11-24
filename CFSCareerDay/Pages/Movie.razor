@@ -23,6 +23,16 @@
             <p style="font-size: 1.5em; color: pink; background-color: black">@TheMovie.overview</p>
             @*Written with Morgan from year 10*@
             <p class="alert alert-light">@TheMovie.tagline</p>
+            
+            @*Written with Maddi and Emma from year 10*@
+            <h5>Production Companies</h5>
+            <ol>
+            @foreach (var prodCompany in TheMovie.production_companies)
+            {
+                <li>@prodCompany.name</li>
+            }
+            </ol>
+
         </div>
     </div>
 }
