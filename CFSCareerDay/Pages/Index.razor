@@ -12,23 +12,28 @@
 
 @if (Movies != null && Movies.Any())
 {
-
-    @foreach (var movie in Movies)
-    {
-        @*This code written with Noah and Leo Year 8*@
-                <div class="card col-3">
-            @*This code written with millie yasmin, martha, may, erin Year 8*@
+    <div class="row">
+        @foreach (var movie in Movies)
+        {
+            @*This code written with Noah and Leo Year 8*@
+            <div class="col-3">
+                <div class="card" style="margin-bottom: 12px;">
+                    @*This code written with millie yasmin, martha, may, erin Year 8*@
                     <img src="https://www.themoviedb.org/t/p/w440_and_h660_face/@movie.poster_path" class="card-img-top"/>
                     @*This code written with Isla from Year 8*@
                     <div class="card-body">
                         <h2 class="card-title">@movie.title</h2>
-                        <p class="card-text">Movie description</p>
-                @*This code written with Tom and Elliot Year 8*@
+                        
+                        @*This code written with Dillon Year 12*@
+                        <p class="card-text">@movie.overview</p>
+
+                        @*This code written with Tom and Elliot Year 8*@
                         <p> Release date: @movie.release_date</p>
                     </div>        
-        </div>
-    }
-
+                </div>
+            </div>        
+        }
+    </div>
 }
 
 
