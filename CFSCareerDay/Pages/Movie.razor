@@ -1,5 +1,5 @@
 ﻿@inject HttpClient Http
-@page "/movie"
+@page "/movie/{MovieId}" @*Code Written with Bridie from Year 9*@
 @using System.Diagnostics.Tracing
 
 
@@ -8,7 +8,7 @@
 @if (TheMovie != null)
 {
     @*Written with Leighton, Harrison, Joe from year 9*@
-    <div style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/@TheMovie.backdrop_path');">
+    <div style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/@TheMovie.backdrop_path'); background-repeat: no-repeat;">
         <h1 class="display-1 text-light">@TheMovie.title</h1>    
         
         <br/>
@@ -30,11 +30,14 @@
 @code {
     private MovieDetails TheMovie { get; set; }
 
+    [Parameter]
+    public string MovieId { get; set; }
+
 
 
     protected override async Task OnInitializedAsync()
     {
-        TheMovie = await Http.GetFromJsonAsync<MovieDetails>("https://api.themoviedb.org/3/movie/566525?api_key=245735d960369aaa9100f4410af813de");
+        TheMovie = await Http.GetFromJsonAsync<MovieDetails>($"https://api.themoviedb.org/3/movie/{MovieId}?api_key=245735d960369aaa9100f4410af813de");
     }
 
     public class MovieResult
