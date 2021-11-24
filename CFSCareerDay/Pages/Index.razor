@@ -5,7 +5,7 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello CFS Students!</h1>
+<h1 class="display-1">Hello CFS Students <br/> Help Me Write this App!</h1>
 @*This code written with George Year 7*@
 <p style="color: blue;">What should we make the app do????</p>
 
@@ -26,10 +26,10 @@
                         <h2 class="card-title">@movie.title</h2>
                         
                         @*This code written with Dillon Year 12*@
-                        <p class="card-text">@movie.overview</p>
+                        <p class="card-text">Ruby says "@movie.overview"</p>
 
                         @*This code written with Tom and Elliot Year 8*@
-                        <p> Release date: @movie.release_date</p>
+                        <p> Release date: @(movie.NiceReleaseDate)</p> @*This code written with Kiah Year 11 *@
                     </div>        
                 </div>
             </div>        
@@ -72,5 +72,6 @@
         public bool video { get; set; }
         public double vote_average { get; set; }
         public int vote_count { get; set; }
+        public string NiceReleaseDate => DateTime.Parse(release_date).ToString("dd MMM yyyy");
     }
 }
