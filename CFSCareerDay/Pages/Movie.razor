@@ -1,6 +1,6 @@
 ﻿@inject HttpClient Http
-@page "/movie/{MovieId}" @*Code Written with Bridie from Year 9*@
-@using System.Diagnostics.Tracing
+@*Code Written with Bridie from Year 9*@
+@page "/movie/{MovieId}" 
 
 
 <PageTitle>Movie title</PageTitle>
@@ -8,17 +8,22 @@
 @if (TheMovie != null)
 {
     @*Written with Leighton, Harrison, Joe from year 9*@
-    <div style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/@TheMovie.backdrop_path'); background-repeat: no-repeat;">
-        <h1 class="display-1 text-light">@TheMovie.title</h1>    
-        
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+    <div style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/@TheMovie.backdrop_path'); 
+                background-repeat: no-repeat; 
+                height: 800px; 
+                background-color: rgba(255,255,255,0.6);
+                background-blend-mode: lighten; 
+                padding: 15px">
+        <div>
+        <h1 class="display-1">@TheMovie.title</h1>    
+            @*Written with Louis Year 13*@
 
+            <a href="@TheMovie.homepage" class="btn btn-primary">Find out more</a>
+
+            <p>@TheMovie.overview</p>
+            @*Written with Morgan from year 10*@
+            <p class="alert alert-light">@TheMovie.tagline</p>
+        </div>
     </div>
 }
 
