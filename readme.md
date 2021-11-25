@@ -11,6 +11,7 @@ You can [see a list of all the commits](https://github.com/tomstylestailwind/cfs
 A commit looks like this.
 
 ![An example commit](https://raw.githubusercontent.com/tomstylestailwind/cfscareerday/master/CFSCareerDay/wwwroot/img/ExampleCommit.JPG "Example commit diff")
+
 You can see which file changed and which lines of code were added or removed. In this case two new lines (19 and 20) have been added.
 
 ## Tools Used
