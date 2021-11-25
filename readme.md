@@ -3,6 +3,7 @@ All code written with the help of the students at Colonel Frank Seely School at 
 The idea was to create an a basic app in a day with the help of the students. The app has 2 pages. One lists movies and the other lets you see more information about a single movie. 
 
 The completed app can be seen here. 
+[https://cfscareerday.azurewebsites.net/](https://cfscareerday.azurewebsites.net/)
 
 
 ## Tools Used
