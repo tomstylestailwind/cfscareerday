@@ -6,7 +6,7 @@ The completed app can be seen here.
 [https://cfscareerday.azurewebsites.net/](https://cfscareerday.azurewebsites.net/)
 
 Each change I made to the code is called a **commit**. With each commit I wrote a short comment explaining what the change did, and who helped me write it. 
-You can [https://github.com/tomstylestailwind/cfscareerday/commits/master](see a list of all the commits), perhaps find yours. 
+You can [see a list of all the commits](https://github.com/tomstylestailwind/cfscareerday/commits/master), perhaps find yours. 
 
 A commit looks like this. 
 ![An example commit](https://raw.githubusercontent.com/tomstylestailwind/cfscareerday/master/CFSCareerDay/wwwroot/img/ExampleCommit.jpg "Example commit diff")
