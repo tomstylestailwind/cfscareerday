@@ -7,20 +7,26 @@
 
 @if (TheMovie != null)
 {
+   
     @*Written with Leighton, Harrison, Joe from year 9*@
     <div style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/@TheMovie.backdrop_path'); 
-                background-repeat: no-repeat; 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
                 height: 800px; 
-                background-color: rgba(255,255,255,0.6);
-                background-blend-mode: lighten; 
-                padding: 15px">
-        <div>
-        <h1 class="display-1">@TheMovie.title</h1>    
+                background-color: rgba(0,0,0,0.7);
+                background-blend-mode: darken; 
+                padding: 15px" class="text-light row">
+        <div class="col-sm-3">
+            <img src="https://www.themoviedb.org/t/p/w440_and_h660_face/@TheMovie.poster_path" class="rounded img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h1 class="display-1">@TheMovie.title</h1>    
             @*Written with Louis Year 13*@
 
-            <a href="@TheMovie.homepage" class="btn btn-primary">Find out more</a>
+            <a href="@TheMovie.homepage" class="btn btn-primary mb-2">Find out more</a>
             @*Written with Isabelle from year 9 - she made it pink*@
-            <p style="font-size: 1.5em; color: pink; background-color: black">@TheMovie.overview</p>
+            <p style="font-size: 1.5em; color: pink; background-color: rgba(0, 0, 0, 0.4); padding: 10px;">@TheMovie.overview</p>
             
             @*Conditional Logic written with Tobias*@
             @if (!string.IsNullOrEmpty(TheMovie.tagline))
@@ -29,32 +35,25 @@
                 <p class="alert alert-light">@TheMovie.tagline</p>    
             }
             
-            
             @*Written with Maddi and Emma from year 10*@
-            <h5>Production Companies</h5>
-            <ol>
-            @foreach (var prodCompany in TheMovie.production_companies)
-            {
-                <li>@prodCompany.name</li>
-            }
-            </ol>
-
+            <div style="background-color: rgba(0, 0, 0, 0.4); padding: 10px;">
+                <h5>Production Companies</h5>
+                <ol>
+                    @foreach (var prodCompany in TheMovie.production_companies)
+                    {
+                        <li>@prodCompany.name</li>
+                    }
+                </ol>
+            </div>
         </div>
     </div>
 }
-
-
-
-
-
 
 @code {
     private MovieDetails TheMovie { get; set; }
 
     [Parameter]
     public string MovieId { get; set; }
-
-
 
     protected override async Task OnInitializedAsync()
     {
