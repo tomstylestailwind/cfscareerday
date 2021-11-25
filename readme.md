@@ -5,6 +5,10 @@ The idea was to create an a basic app in a day with the help of the students. Th
 The completed app can be seen here. 
 [https://cfscareerday.azurewebsites.net/](https://cfscareerday.azurewebsites.net/)
 
+## Photos
+
+Preparing for the Day
+![The San Juan Mountains are beautiful!](./CFSCareerDay/wwwroot/img/selfie.jpg "Preparing for the day.")
 
 ## Tools Used
 I used the following tools. All of them are free to download and use at home.
