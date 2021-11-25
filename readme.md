@@ -5,10 +5,12 @@ The idea was to create an a basic app in a day with the help of the students. Th
 The completed app can be seen here. 
 [https://cfscareerday.azurewebsites.net/](https://cfscareerday.azurewebsites.net/)
 
-## Photos
+Each change I made to the code is called a **commit**. With each commit I wrote a short comment explaining what the change did, and who helped me write it. 
+You can [https://github.com/tomstylestailwind/cfscareerday/commits/master](see a list of all the commits), perhaps find yours. 
 
-Preparing for the Day
-![The San Juan Mountains are beautiful!](./CFSCareerDay/wwwroot/img/selfie.jpg "Preparing for the day.")
+A commit looks like this. 
+![An example commit](https://raw.githubusercontent.com/tomstylestailwind/cfscareerday/master/CFSCareerDay/wwwroot/img/ExampleCommit.jpg "Example commit diff")
+You can see which file changed and which lines of code were added or removed. In this case two new lines (19 and 20) have been added.
 
 ## Tools Used
 I used the following tools. All of them are free to download and use at home.
@@ -19,7 +21,7 @@ This is the main tool I used to write the code
 [Visual Studio Code](https://code.visualstudio.com/)
 This is a useful tool I use for looking at code
 
-[The Movie DB Api](https://www.themoviedb.org/documentation/api)
+[The Movie DB API](https://www.themoviedb.org/documentation/api)
 This is where all the data for the system comes from 
 
 [Bootstrap 5](https://getbootstrap.com/)
@@ -32,3 +34,12 @@ A lot of web applications have an API behind them. API stands for Application Pr
 
 [Try out C#](https://docs.microsoft.com/en-us/learn/paths/csharp-first-steps/)
 
+[Learn HTML](https://www.w3schools.com/html/html_intro.asp)
+
+## Photos
+
+Preparing for the day
+![Getting ready for the day.](https://raw.githubusercontent.com/tomstylestailwind/cfscareerday/master/CFSCareerDay/wwwroot/img/Selfie.jpg "Preparing for the day.")
+
+Explaining some code 
+![Explaining some code to the students](https://raw.githubusercontent.com/tomstylestailwind/cfscareerday/master/CFSCareerDay/wwwroot/img/Explaining.jpg "Explaining some code.")
