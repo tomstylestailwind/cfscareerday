@@ -39,7 +39,9 @@ A lot of web applications have an API behind them. API stands for Application Pr
 ## Photos
 
 Preparing for the day
+
 ![Getting ready for the day.](https://raw.githubusercontent.com/tomstylestailwind/cfscareerday/master/CFSCareerDay/wwwroot/img/Selfie.jpg "Preparing for the day.")
 
 Explaining some code 
+
 ![Explaining some code to the students](https://raw.githubusercontent.com/tomstylestailwind/cfscareerday/master/CFSCareerDay/wwwroot/img/Explaining.jpg "Explaining some code.")
